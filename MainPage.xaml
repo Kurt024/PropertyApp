@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="propertyApp.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView 
+        BackgroundColor="#597445"
+        HorizontalOptions="Center"
+        WidthRequest="500">
+        <VerticalStackLayout 
+            VerticalOptions="Center">
+            <HorizontalStackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Label Text="H"
+                       FontSize="70"
+                       FontFamily="SfProBold"
+                       HorizontalOptions="Center"
+                       />
+                <Image
+                    Source="home.png"
+                    HeightRequest="70"
+                    WidthRequest="70"/>
+                <Label Text="M I E S"
+                   FontSize="70"
+                   FontFamily="SfProBold"
+                   HorizontalOptions="Center"
+                   />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout 
+                HorizontalOptions="Center">
+                <Button                
+                    Text="Get Started"
+                    TextColor="White"
+                    FontSize="20"
+                    VerticalOptions="End"
+                    BackgroundColor="Transparent"
+                    x:Name="getStartedbutton"
+                    Clicked="getStartedbutton_Clicked"
+                    FontFamily="SfProBold" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

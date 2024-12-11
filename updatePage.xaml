@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="propertyApp.updatePage"
+             Title="updatePage">
+    <VerticalStackLayout 
+        Padding="20">
+        <Label 
+            Text="Edit Property" 
+            FontSize="30" 
+            FontFamily="SfProBold" 
+            HorizontalOptions="Center" 
+            TextColor="Black"/>
+        
+        <Entry 
+            x:Name="StreetAddress" 
+            Placeholder="Street Address"/>
+        <Entry 
+            x:Name="City" 
+            Placeholder="City"/>
+        <Entry 
+            x:Name="Country" 
+            Placeholder="Country"/>
+        <Entry 
+            x:Name="Price" 
+            Placeholder="Price"/>
+
+        <Button 
+            Text="Save Changes" 
+            BackgroundColor="#597445" 
+            TextColor="White" 
+            CornerRadius="20"
+            x:Name="saveButton"
+            Clicked="saveButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

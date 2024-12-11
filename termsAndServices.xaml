@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="propertyApp.termsAndServices"           
+             BackgroundColor="Transparent">
+
+    <Frame
+        BackgroundColor="White"
+        HeightRequest="550"
+        WidthRequest="400"
+        BorderColor="Transparent"
+        CornerRadius="25">
+        <VerticalStackLayout>
+            <Label
+                Text="Terms and Policies"
+                TextColor="Black"
+                FontSize="20"
+                FontFamily="SfProBold"
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"
+                />
+            <ScrollView
+                Orientation="Vertical"
+                HeightRequest="370"
+                WidthRequest="350"
+                HorizontalScrollBarVisibility="Always"
+                >
+                <Label
+                    Text="1. Acceptance of Terms By using the [App Name] application, you agree to comply with and be bound by these Terms of Use. If you do not agree with these terms, please do not use the app.
+                        2. Services Provided [App Name] provides information and services for property listing, searching, and management. We do not guarantee the accuracy or completeness of property listings.
+                        3. User Accounts To use certain features, you may need to create an account. You are responsible for maintaining the confidentiality of your account information and for all activities under your account.
+                        4. Property Listings and User Content Users are allowed to create, edit, and manage property listings. You agree that all content provided by you, including property details, images, and descriptions, is accurate and does not infringe any third-party rights.
+                        5. Fees and Payments Some features of the app may require payment. All fees are non-refundable and subject to change at our discretion. Payments for any services must be made as specified in the app.
+                        6. Intellectual Property All content, logos, and trademarks displayed on the app are the property of [App Name] or their respective owners. Users may not copy, distribute, or create derivative works from this content without permission.
+                        7. Liability Limitation [App Name] is not liable for any direct, indirect, or incidental damages arising from the use or inability to use the app, including errors in property listings or user-generated content.
+                        8. Modifications to Terms We may update these terms at any time. Continued use of the app following changes indicates acceptance of the new terms.
+                        9. Contact Information For any questions about these terms, please contact us at [contact information].
+                        Privacy Policy
+                        1. Information Collection We collect personal information such as your name, contact details, and property information when you create an account or list a property.
+                        2. Usage Data We collect data on how you interact with the app to improve the user experience and personalize your recommendations.
+                        3. Cookies and Tracking Our app uses cookies and similar tracking technologies to analyze usage and improve services. You can control your preferences for cookies in the settings.
+                        4. Information Sharing We do not sell or share your personal information with third parties without your consent, except as required by law or to provide services.
+                        5. Data Security We use appropriate security measures to protect your information. However, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.
+                        6. User Rights You have the right to access, update, and delete your personal information by contacting us or using account settings.
+                        7. Retention of Data We retain your information as long as your account is active or as needed to comply with legal obligations.
+                        8. Minors’ Privacy Our app is not intended for children under the age of 13. We do not knowingly collect personal information from children.
+                        9. Changes to Privacy Policy We may update our Privacy Policy periodically. Any changes will be notified within the app or by email.
+                        10. Contact Us For questions or concerns regarding this Privacy Policy, please contact us at [contact information]."
+                    TextColor="Black"
+                    FontSize="11"
+                    LineBreakMode="WordWrap"
+                    />
+            </ScrollView>
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <CheckBox x:Name="agreeCheckbox"
+                          BackgroundColor="Gray"/>
+                <Label
+                    Text="I agree to the Terms and Policies"
+                    TextColor="Black"
+                    FontSize="11"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <Button
+                Text="Proceed"
+                TextColor="White"
+                BackgroundColor="#597445"
+                FontFamily="SfProBold"
+                CornerRadius="20"
+                x:Name="proceedButton"
+                Clicked="proceedButton_Clicked"
+                />
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>

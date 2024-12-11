@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="propertyApp.listing"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout
+        BackgroundColor="White">
+        <Button
+            HeightRequest="60"
+            Margin="15,30,0,0"
+            HorizontalOptions="Start"
+            ImageSource="back.png"
+            BackgroundColor="Transparent"
+            x:Name="backButton"
+            Clicked="backButton_Clicked">
+        </Button>
+        <Label
+            Text="My Listings"
+            TextColor="Black"
+            FontFamily="SfProBold"
+            HorizontalOptions="Center"
+            Margin="0,-50,0,0"
+            FontSize="30"/>
+        <CollectionView 
+            x:Name="propertyList" 
+            SelectionMode="Single"
+            Margin="0,30"
+            ItemsSource="{Binding Properties}"
+            >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame 
+                        BorderColor="Gray" 
+                        BackgroundColor="Transparent"
+                        Padding="10" 
+                        Margin="10">
+                        <HorizontalStackLayout
+                            >
+                            <Image 
+                                Source="{Binding ImagePath}" 
+                                WidthRequest="100" 
+                                HeightRequest="100" 
+                                Aspect="AspectFill"/>
+                            <VerticalStackLayout Padding="10">
+                                <Label 
+                                    Text="{Binding StreetAddress}" 
+                                    FontSize="18" 
+                                    TextColor="Black"/>
+                                <Label 
+                                    Text="{Binding City}" 
+                                    FontSize="14" 
+                                    TextColor="Gray"/>
+                                <Label 
+                                    Text="{Binding Country}" 
+                                    FontSize="14" 
+                                    TextColor="Gray"/>
+                                <Label 
+                                    Text="{Binding Price}" 
+                                    FontSize="16" 
+                                    TextColor="Green"/>
+                                <HorizontalStackLayout 
+                                    Spacing="20">
+                                    <Button 
+                                        Text="Edit" 
+                                        x:Name="editButton"
+                                        Clicked="editButton_Clicked"
+                                        CommandParameter="{Binding Id}"/>
+                                    <Button 
+                                        Text="Delete" 
+                                        x:Name="deleteButton"
+                                        Clicked="deleteButton_Clicked"
+                                        CommandParameter="{Binding Id}"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button 
+            Text="Add New Property"
+            BackgroundColor="#597445"
+            TextColor="White"
+            CornerRadius="20"
+            WidthRequest="350"
+            HorizontalOptions="Center"
+            Margin="0,20,0,0"
+            FontFamily="SfProBold"
+            x:Name="addProperty"
+            Clicked="addProperty_Clicked">
+            <Button.Shadow>
+                <Shadow Radius="5"
+                        Offset="1,3"
+                        Opacity="1.0"
+                        Brush="Gray"/>
+            </Button.Shadow>
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
